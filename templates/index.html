@@ -1,15 +1,51 @@
-{% extends "base.html" %} 
-{% block body_header %} 
-    <h1>Welcome in Quiz App</h1>
-{% endblock %} 
-{% block body_main %}
+{% extends "base.html" %} {% block title %} Quiz App {% endblock %} {% block
+body_main %}
 <div class="container">
 	<div class="row">
-		<div class="col-2"></div>
-		<div class="col d-flex justify-content-center h2">
-			Welcome in quiz
+		<div class="col">1 of 1</div>
+		<div class="row mt-5 align-items-center">
+			<div class="col d-flex justify-content-center">
+				<h2>Welcome to the Quiz App 
+					<br><br>
+					
+					<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+						Button with data-bs-target
+					  </button>
+					  
+					  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+						<div class="offcanvas-header">
+						  <h3 class="offcanvas-title" id="offcanvasExampleLabel">Choose your quiz</h3>
+						  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+						  <div class="dropdown mt-3">
+							<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+							  Dropdown button
+							</button>
+							<ul class="dropdown-menu">
+							  <li><a class="dropdown-item" href="{{ url_for('quiz1') }}">Quiz No1</a></li>
+							  <li><a class="dropdown-item" href="{{ url_for('quiz2') }}">Quiz No2</a></li>
+							  <li><a class="dropdown-item" href="{{ url_for('quiz3') }}">Quiz No3</a></li>
+							  <li><a class="dropdown-item" href="{{ url_for('quiz4') }}">Quiz No4</a></li>
+							</ul>
+						  </div>
+						</div>
+					  </div>
+				</h2>
+				
+				
+			</div>
+			<div class="col">
+				<img
+					src="{{ url_for('static', filename='quiz41.jpg') }}"
+					class="rounded mx-auto d-block"
+				/>
+			</div>
 		</div>
-		<div class="col-2"></div>
+		<div class="row mt-5">
+			<div class="col with-margin" style="text-align: left">Quiz App by Sebastian Słoma &copy;2023</div>
+			
+		</div>
 	</div>
+	{% endblock %}
 </div>
-{% endblock %}
