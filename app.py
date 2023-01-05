@@ -13,8 +13,8 @@ quiz_no1 = [{
             'correct': 'print("Hello World")'},
             {
             'question': 'Which is a valid variable name in Python?',
-            'answer': ['1_data', 'old-data', '_output'],
-            'correct': '_output'},
+            'answer': ['1_data', 'old-data', 'new_data'],
+            'correct': 'new_data'},
             {
             'question': 'How do you insert COMMENTS in Python code?',
             'answer': ['#This is a comment', '//This is a comment', '/*This is a comment*/'],
@@ -41,26 +41,26 @@ quiz_no1 = [{
             'correct': 'def myFunction():'},
             {
             'question': 'What is a correct syntax to return the first character in a string?',
-            'answer': ['x = "Hello".sub(0, 1)', 'x = sub("Hello", 0, 1)', 'x = sub("Hello")[0]'],
-            'correct': ''}
+            'answer': ['x = "Hello".sub(0, 1)', 'x = sub("Hello", 0, 1)', 'x = "Hello"[0]'],
+            'correct': 'x = "Hello"[0]'}
             ]
 
 quiz_no2 = [{
             'question': 'Which method can be used to remove any whitespace from both the beginning and the end of a string?',
             'answer': ['trim()', 'len()', 'strip()'],
-            'correct': ''},
+            'correct': 'strip()'},
             {
             'question': 'Which method can be used to return a string in upper case letters?',
             'answer': ['upper()', 'uppercase()', 'touppercase()'],
-            'correct': ''},
+            'correct': 'upper()'},
             {
             'question': 'Which method can be used to replace parts of a string?',
             'answer': ['repl()', 'replace()', 'switch()'],
-            'correct': ''},
+            'correct': 'replace()'},
             {
             'question': 'Which operator is used to multiply numbers?',
             'answer': ['%', 'x', '*'],
-            'correct': ''},
+            'correct': '*'},
             {
             'question': 'Which operator can be used to compare two values?',
             'answer': ['==', '><', '='],
@@ -84,80 +84,81 @@ quiz_no2 = [{
             ]
 
 quiz_no3 = [{
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'Which collection is ordered, changeable, and allows duplicate members?',
+            'answer': ['set', 'dictionary', 'list'],
+            'correct': 'list'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'Which collection does not allow duplicate members?',
+            'answer': ['set', 'list', 'tuple'],
+            'correct': 'set'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'How do you start writing an if statement in Python?',
+            'answer': ['if x > y then:', 'if (x > y)', 'if x > y:'],
+            'correct': 'if x > y:'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'How do you start writing a while loop in Python?',
+            'answer': ['while x > y:', 'x > y while', 'while (x > y)'],
+            'correct': 'while x > y:'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'How do you start writing a for loop in Python?',
+            'answer': ['for each x in y:', 'for x in y:', 'for x > y:'],
+            'correct': 'for x in y:'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'Which statement is used to stop a loop?',
+            'answer': ['exit', 'break', 'stop'],
+            'correct': 'break'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'Which one is NOT a legal variable name?',
+            'answer': ['my-var', 'my_var', '_myvar'],
+            'correct': 'my-var'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'Which language is Django written in?',
+            'answer': ['Java', 'Python', 'C'],
+            'correct': 'Python'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''}
+            'question': 'What is the name of the package manager for Python packages, or modules?',
+            'answer': ['Matplotlib', 'TensorFlow', 'PIP'],
+            'correct': 'PIP'}
             ]
 
 quiz_no4 = [{
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'Which keyword allows us to load a module in Python?',
+            'answer': ['Import', 'Load', 'Include'],
+            'correct': 'Import'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'What manages memory in Python?',
+            'answer': ['Memory cache', 'Private heap space', 'Development space'],
+            'correct': 'Private heap space'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'What command can you use to delete a file in Python?',
+            'answer': ['Os.delete (filename)', 'Os.remove (filename)', 'Os.clean (filename)'],
+            'correct': 'Os.remove (filename)'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'What is the use of // operator in Python?',
+            'answer': ['Or', 'Separation', 'Division'],
+            'correct': 'Division'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'Python is designed by:',
+            'answer': ['Guido van Rossum', 'Dennis Ritchie', 'Google'],
+            'correct': 'Guido van Rossum'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'Python first appeared in:',
+            'answer': ['January 1982', 'December 1987', 'February 1991'],
+            'correct': 'February 1991'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'Python is used for:',
+            'answer': ['Web development (server-side) and software development', 'Mathematics and system scripting', 'Both answers are correct'],
+            'correct': 'Both answers are correct'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''},
+            'question': 'What module is most commonly used when working with directories?',
+            'answer': ['OS moudle', 'Pandas module', 'Numpy module'],
+            'correct': 'OS moudle'},
             {
-            'question': '',
-            'answer': ['', '', ''],
-            'correct': ''}
+            'question': 'What symbol is used to decorate a function?',
+            'answer': ['?', '@', '&'],
+            'correct': '@'}
             ]
+
 
 @app.route('/')
 def index():
