@@ -1,5 +1,4 @@
-{% extends "base.html" %} 
-{% block title %} Quiz No1 {% endblock %}
+{% extends "base.html" %} {% block title %} Quiz No1 {% endblock %}
 
 {% block body_main %}
 <div class="container text-start">
@@ -149,4 +148,25 @@
     
 </div>
 
+<form method="GET">
+	{% for q in questions %}
+	<p>
+		{{ q.question }} 
+        {% set qst = loop.index0 %} 
+        {% for a in q.answers %}
+		<label>
+			<input type="radio" value="{{ a }}" name="{{ qst }}" />
+			{{ o }}
+		</label>
+		<br />
+		{% endfor %}
+	</p>
+	{% endfor %}
+</form>
 {% endblock %}
+
+
+
+
+
+

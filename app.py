@@ -170,9 +170,9 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/quiz1')
+@app.route('/quiz1', methods=['GET','POST'])
 def quiz1():
-    return render_template('quiz1.html')
+    return render_template('quiz1.html', questions_1=quiz_no1)
 
 
 @app.route('/quiz1_result')
