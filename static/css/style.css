@@ -4,7 +4,7 @@
     padding: 0;
   }
   
-  body {
+  .index_bg {
     background-image: url(/static/wave1.png);
     height: 100vh;
     background-position: center;
