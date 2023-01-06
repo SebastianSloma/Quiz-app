@@ -1,8 +1,4 @@
-{% extends "base.html" %} {% block title %} Quiz No1 {% endblock %} 
-
-
-
-{% block
+{% extends "base.html" %} {% block title %} Quiz No1 {% endblock %} {%block
 body_main %}
 <div class="container text-start">
 	<div class="row mt-5">
@@ -15,29 +11,24 @@ body_main %}
 		<div class="col"><h1>Quiz No1</h1></div>
 	</div>
 </div>
-
-<p>
-  {% for message in get_flashed_messages() %}
-    {{ message }}
-  {% endfor %}
-  </p>
 <div>
-<form method="POST">
-	{% for q in questions %}
-	<p>
-		{{ q.question }}
-		<br />
-		{% set num = loop.index0 %} 
-    {% for a in q.answer %}
-		<label>
-			<input type="radio" value="{{ a }}" name="{{ ans }}" />
-			{{ a }}
-		</label>
-		<br />
+	<form method="POST">
+		{% for q in questions %}
+		<p>
+			{{ q.question }}
+			<br />
+
+			{% set qnr = loop.index0 %} {% for o in q.answers %}
+			<label>
+				<input type="radio" value="{{ o }}" name="{{ qnr }}" />
+				{{ o }}
+			</label>
+			<br />
+			{% endfor %}
+		</p>
 		{% endfor %}
-	</p>
-	{% endfor %}
-	<button type="submit">Check answers</button>
-</form>
+
+		<button type="submit">Check answers</button>
+	</form>
 </div>
 {% endblock %}

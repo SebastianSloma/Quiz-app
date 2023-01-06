@@ -1,1 +1,22 @@
 {% extends "base.html" %}
+{% block body_main %}
+
+<div class="container text-start">
+	<div class="row mt-5">
+		<div class="col"></div>
+	</div>
+	<div class="row mt-5">
+		<div class="col"></div>
+	</div>
+	<div class="row text-center">
+		<div class="col"><h1>Quiz No3 Result</h1></div>
+	</div>
+</div>
+<p>
+
+    {% for message in get_flashed_messages() %}
+    	{{ message }}
+    {% endfor %}
+
+</p>
+{% endblock %}
