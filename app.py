@@ -5,7 +5,7 @@ from flask import render_template, redirect, request, url_for, flash
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'VeryHardKey2Gu3es!'
+app.config.update(dict(SECRET_KEY = 'VeryHardKey2Gu3es!',))
 
 quiz_no1 = [{
             'question': 'What is a correct syntax to output "Hello World" in Python?',
@@ -172,7 +172,19 @@ def about():
 
 @app.route('/quiz1', methods=['GET','POST'])
 def quiz1():
-    return render_template('quiz1.html', questions_1=quiz_no1)
+
+    if request.method == 'POST':
+        points = 0
+        answer = request.form
+
+        for num, ans in answer.items():
+            if ans == quiz_no1[int(num)]['correct']:
+                points += 1
+        
+        flash('Correct answers: {0}'.format(points))
+        return redirect(url_for('quiz1'))
+
+    return render_template('quiz1.html', questions=quiz_no1)
 
 
 @app.route('/quiz1_result')
@@ -180,19 +192,41 @@ def quiz1_result():
     return render_template('quiz1_result.html')
 
 
-@app.route('/quiz2')
+@app.route('/quiz2', methods=['GET','POST'])
 def quiz2():
-    return render_template('quiz2.html')
+    if request.method == 'POST':
+        points = 0
+        answer = request.form
+
+        for num, ans in answer.items():
+            if ans == quiz_no1[int(num)]['correct']:
+                points += 1
+        
+        flash('Correct answers: {0}'.format(points))
+        return redirect(url_for('quiz2_result'))
+    return render_template('quiz2.html',questions_2=quiz_no2)
 
 
 @app.route('/quiz2_result')
 def quiz2_result():
+    
     return render_template('quiz2_result.html')
 
 
-@app.route('/quiz3')
+@app.route('/quiz3', methods=['GET','POST'])
 def quiz3():
-    return render_template('quiz3.html')
+
+    if request.method == 'POST':
+        points = 0
+        answer = request.form
+
+        for num, ans in answer.items():
+            if ans == quiz_no1[int(num)]['correct']:
+                points += 1
+        
+        flash('Correct answers: {0}'.format(points))
+        return redirect(url_for('quiz3_result'))
+    return render_template('quiz3.html',questions_3=quiz_no3)
 
 
 @app.route('/quiz3_result')
@@ -200,9 +234,20 @@ def quiz3_result():
     return render_template('quiz3_result.html')
 
 
-@app.route('/quiz4')
+@app.route('/quiz4', methods=['GET','POST'])
 def quiz4():
-    return render_template('quiz4.html')
+
+    if request.method == 'POST':
+        points = 0
+        answer = request.form
+
+        for num, ans in answer.items():
+            if ans == quiz_no1[int(num)]['correct']:
+                points += 1
+        
+        flash('Correct answers: {0}'.format(points))
+        return redirect(url_for('quiz4_result'))
+    return render_template('quiz4.html',questions_4=quiz_no4)
 
 
 @app.route('/quiz4_result')

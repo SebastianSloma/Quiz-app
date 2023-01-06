@@ -1,1 +1,10 @@
 {% extends "base.html" %}
+{% block body_main %}
+<p>
+
+    {% for message in get_flashed_messages() %}
+              {{ message }}
+    {% endfor %}
+
+</p>
+{% endblock %}
