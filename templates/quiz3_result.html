@@ -12,13 +12,18 @@
 		<div class="col"><h1>Quiz No3 Result</h1></div>
 	</div>
 </div>
-<p>
+<div class="alert alert-success" role="alert">
+	<h4 class="alert-heading">Well done!</h4>
+	<p>
 
-    {% for message in get_flashed_messages() %}
-    	{{ message }}
-    {% endfor %}
+		{% for message in get_flashed_messages() %}
+			{{ message }}
+		{% endfor %}
+	
+	</p>
+	
+  </div>
 
-</p>
 
 <div class="row mt-5">
 	<div class="col with-margin" style="text-align: left">
