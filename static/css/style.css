@@ -1,14 +1,16 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .index_bg {
-    background-image: url(/static/wave1.png);
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-  }
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
-  
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.index_bg {
+	background-image: url(/static/wave1.png);
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+}
