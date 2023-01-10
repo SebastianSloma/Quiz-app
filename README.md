@@ -1,7 +1,7 @@
 
 # Quiz-app
 
-A brief description of what this project does and who it's for
+Python knowledge quiz
 
 
 ## Features
@@ -10,6 +10,8 @@ A brief description of what this project does and who it's for
 
 
 ## Tech Stack
+
+**Client:** React, Redux, TailwindCSS
 
 - Python
 - Flask
