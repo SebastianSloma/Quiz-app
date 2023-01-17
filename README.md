@@ -11,7 +11,6 @@ Python knowledge quiz
 
 ## Tech Stack
 
-**Client:** React, Redux, TailwindCSS
 
 - Python
 - Flask
