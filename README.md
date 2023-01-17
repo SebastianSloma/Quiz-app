@@ -1,3 +1,18 @@
+
 # Quiz-app
 
-Flask Python Quiz Web-App
+Python knowledge quiz
+
+
+## Features
+
+- Quiz result - number of correct answers
+
+
+## Tech Stack
+
+
+- Python
+- Flask
+- Basic HTML and CSS
+
