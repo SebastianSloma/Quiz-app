@@ -3,7 +3,7 @@
 
 Python knowledge quiz
 
-<a href="http://sebastiansloma.pythonanywhere.com/">Quiz-app</a>
+<a href="http://sebastiansloma.pythonanywhere.com/" target="_blank" >Quiz-app</a>
 
 ## Features
 
